@@ -43,7 +43,10 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawer.Fr
         drawerFragment.setDrawerListener(this);
 
         // display the first navigation drawer view on app launch
-        displayView(0);
+        if(savedInstanceState == null) {
+            displayView(0);
+        }
+
     }
 
 

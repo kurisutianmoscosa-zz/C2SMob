@@ -12,14 +12,14 @@ import android.support.v7.widget.Toolbar;
 
 import com.wizardsgroup.christianmoscosa.c2sapp.R;
 
-public class SubActivity extends ActionBarActivity {
+public class LessonThree extends ActionBarActivity {
 
     private Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sub);
+        setContentView(R.layout.activity_lesson_three);
 
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);

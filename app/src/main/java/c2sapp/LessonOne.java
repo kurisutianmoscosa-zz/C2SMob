@@ -1,7 +1,7 @@
 package c2sapp;
 
 /**
- * Created by ChristianMoscosa on 4/22/2015.
+ * Created by ChristianMoscosa on 5/5/2015.
  */
 import android.app.Activity;
 import android.os.Bundle;
@@ -12,9 +12,9 @@ import android.view.ViewGroup;
 import com.wizardsgroup.christianmoscosa.c2sapp.R;
 
 
-public class ChristianFragment extends Fragment {
+public class LessonOne extends Fragment {
 
-    public ChristianFragment() {
+    public LessonOne() {
         // Required empty public constructor
     }
 
@@ -27,7 +27,7 @@ public class ChristianFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_christian, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_lesson_one, container, false);
 
 
         // Inflate the layout for this fragment

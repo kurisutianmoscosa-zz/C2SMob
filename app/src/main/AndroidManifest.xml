@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="c2sapp.SubActivity"
+            android:name="c2sapp.LessonThree"
             android:label="@string/title_activity_sub" >
         </activity>
     </application>

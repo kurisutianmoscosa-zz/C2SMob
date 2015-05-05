@@ -7,14 +7,28 @@
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
 
-    <string name="nav_item_home">Home</string>
+    <string name="nav_item_lesson_one">Word of God</string>
+    <string name="nav_item_lesson_two">God</string>
+    <string name="nav_item_lesson_three">Jesus Christ</string>
+    <string name="nav_item_lesson_four">The Cross</string>
+    <string name="nav_item_lesson_five">Repentance </string>
+    <string name="nav_item_lesson_six">Faith</string>
+    <string name="nav_item_lesson_seven">Grace</string>
+    <string name="nav_item_lesson_eight">The Kingdom of God</string>
+    <string name="nav_item_lesson_nine">Worship</string>
+    <string name="nav_item_lesson_ten">Fellowship</string>
+
+
+    <!--<string name="nav_item_home">Home</string>-->
     <string name="nav_item_friends">Friends</string>
     <string name="nav_item_notifications">Messages</string>
     <string name="nav_item_christian">Christian</string>
 
     <!-- navigation drawer item labels  -->
     <string-array name="nav_drawer_labels">
-        <item>@string/nav_item_home</item>
+        <item>@string/nav_item_lesson_one</item>
+
+        <!--<item>@string/nav_item_home</item>-->
         <item>@string/nav_item_friends</item>
         <item>@string/nav_item_notifications</item>
         <item>@string/nav_item_christian</item>
@@ -25,6 +39,8 @@
     <string name="title_friends">Friends</string>
     <string name="title_sample">Sample</string>
     <string name="title_home">Home</string>
+
+    <string name="title_lesson_one">Word of God</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

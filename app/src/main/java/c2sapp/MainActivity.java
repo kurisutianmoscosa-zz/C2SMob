@@ -3,6 +3,7 @@ package c2sapp;
 /**
  * Created by ChristianMoscosa on 4/22/2015.
  */
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -15,7 +16,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
+
 import com.wizardsgroup.christianmoscosa.c2sapp.R;
+
 import adapter.FragmentDrawer;
 
 public class MainActivity extends ActionBarActivity implements FragmentDrawer.FragmentDrawerListener {
@@ -25,7 +28,6 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawer.Fr
     private Toolbar mToolbar;
     private FragmentDrawer drawerFragment;
 
-    //minor change
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,12 +45,11 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawer.Fr
         drawerFragment.setDrawerListener(this);
 
         // display the first navigation drawer view on app launch
-        if(savedInstanceState == null) {
+        if (savedInstanceState == null) {
             displayView(0);
         }
 
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -70,10 +71,10 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawer.Fr
             return true;
         }
 
-        if(id == R.id.action_search){
+        if (id == R.id.action_search) {
 //            Toast.makeText(getApplicationContext(), "Search action is selected!", Toast.LENGTH_SHORT).show();
 //            return true;
-            startActivity(new Intent(this,SubActivity.class));
+            startActivity(new Intent(this, LessonThree.class));
         }
 
         return super.onOptionsItemSelected(item);
@@ -89,8 +90,8 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawer.Fr
         String title = getString(R.string.app_name);
         switch (position) {
             case 0:
-                fragment = new HomeFragment();
-                title = getString(R.string.title_home);
+                fragment = new LessonOne();
+                title = getString(R.string.title_lesson_one);
                 break;
             case 1:
                 fragment = new FriendsFragment();
@@ -101,7 +102,7 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawer.Fr
                 title = getString(R.string.title_messages);
                 break;
             case 3:
-                fragment = new ChristianFragment();
+                fragment = new LessonTwo();
                 title = getString(R.string.title_christian);
                 break;
             default:

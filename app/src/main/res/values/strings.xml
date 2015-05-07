@@ -20,31 +20,38 @@
 
 
     <!--<string name="nav_item_home">Home</string>-->
-    <string name="nav_item_friends">Friends</string>
-    <string name="nav_item_notifications">Messages</string>
-    <string name="nav_item_christian">Christian</string>
+    <!--<string name="nav_item_friends">Friends</string>-->
+    <!--<string name="nav_item_notifications">Messages</string>-->
+    <!--<string name="nav_item_christian">Christian</string>-->
 
     <!-- navigation drawer item labels  -->
     <string-array name="nav_drawer_labels">
         <item>@string/nav_item_lesson_one</item>
+        <item>@string/nav_item_lesson_two</item>
+        <item>@string/nav_item_lesson_three</item>
+        <item>@string/nav_item_lesson_four</item>
+        <item>@string/nav_item_lesson_five</item>
+        <item>@string/nav_item_lesson_six</item>
 
         <!--<item>@string/nav_item_home</item>-->
-        <item>@string/nav_item_friends</item>
-        <item>@string/nav_item_notifications</item>
-        <item>@string/nav_item_christian</item>
+        <!--<item>@string/nav_item_friends</item>-->
+        <!--<item>@string/nav_item_notifications</item>-->
+        <!--<item>@string/nav_item_christian</item>-->
     </string-array>
 
-    <string name="title_messages">Messages</string>
-    <string name="title_christian">Christian</string>
-    <string name="title_friends">Friends</string>
-    <string name="title_sample">Sample</string>
-    <string name="title_home">Home</string>
-
     <string name="title_lesson_one">Word of God</string>
+    <string name="title_lesson_two">GOD</string>
+    <string name="title_lesson_three">Jesus Christ</string>
+    <string name="title_lesson_four">The Cross</string>
+    <string name="title_lesson_five">Repentance</string>
+    <string name="title_lesson_six">Faith</string>
+    <string name="title_lesson_seven">Grace</string>
+    <string name="title_lesson_eight">The Kingdom of God</string>
+    <string name="title_lesson_nine">Worship</string>
+    <string name="title_lesson_ten">Fellowship</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_sub">SubActivity</string>
-
     <string name="hello_world">Hello world!</string>
+    <string name="sample_key">meow</string>
 </resources>

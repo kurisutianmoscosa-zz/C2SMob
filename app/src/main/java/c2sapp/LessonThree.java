@@ -1,52 +1,46 @@
 package c2sapp;
 
 /**
- * Created by ChristianMoscosa on 4/23/2015.
+ * Created by ChristianMoscosa on 5/7/2015.
  */
-
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.support.v7.widget.Toolbar;
-
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import com.wizardsgroup.christianmoscosa.c2sapp.R;
 
-public class LessonThree extends ActionBarActivity {
 
-    private Toolbar mToolbar;
+public class LessonThree extends Fragment {
+
+    public LessonThree() {
+        // Required empty public constructor
+    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lesson_three);
 
-
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
-
-        setSupportActionBar(mToolbar);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_sub, menu);
-        return true;
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.fragment_lesson_one, container, false);
+
+
+        // Inflate the layout for this fragment
+        return rootView;
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+    }
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
+    @Override
+    public void onDetach() {
+        super.onDetach();
     }
 }

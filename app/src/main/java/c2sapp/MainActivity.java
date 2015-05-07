@@ -94,16 +94,24 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawer.Fr
                 title = getString(R.string.title_lesson_one);
                 break;
             case 1:
-                fragment = new FriendsFragment();
-                title = getString(R.string.title_friends);
+                fragment = new LessonTwo();
+                title = getString(R.string.title_lesson_two);
                 break;
             case 2:
-                fragment = new MessagesFragment();
-                title = getString(R.string.title_messages);
+                fragment = new LessonThree();
+                title = getString(R.string.title_lesson_three);
                 break;
             case 3:
-                fragment = new LessonTwo();
-                title = getString(R.string.title_christian);
+                fragment = new LessonFour();
+                title = getString(R.string.title_lesson_four);
+                break;
+            case 4:
+                fragment = new LessonFive();
+                title = getString(R.string.title_lesson_five);
+                break;
+            case 5:
+                fragment = new LessonSix();
+                title = getString(R.string.title_lesson_six);
                 break;
             default:
                 break;

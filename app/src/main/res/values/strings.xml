@@ -54,4 +54,7 @@
     <string name="title_activity_sub">SubActivity</string>
     <string name="hello_world">Hello world!</string>
     <string name="sample_key">meow</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

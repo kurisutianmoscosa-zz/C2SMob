@@ -113,6 +113,10 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawer.Fr
                 fragment = new LessonSix();
                 title = getString(R.string.title_lesson_six);
                 break;
+            case 6:
+                fragment = new LessonSeven();
+                title = getString(R.string.title_lesson_seven);
+                break;
             default:
                 break;
         }

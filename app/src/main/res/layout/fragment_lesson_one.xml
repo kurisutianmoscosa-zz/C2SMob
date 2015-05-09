@@ -5,26 +5,121 @@
     android:orientation="vertical"
     tools:context="com.wizardsgroup.christianmoscosa.c2sapp.LessonOne">
 
-
-    <TextView
-        android:id="@+id/label"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="100dp"
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scrollview"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:textSize="45dp"
-        android:text="Lesson One"
-        android:textStyle="bold"/>
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:layout_below="@id/label"
-        android:layout_centerInParent="true"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="12dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center_horizontal"
-        android:text="Edit fragment_lesson_one.xml to change the appearance" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/label"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="LESSON ONE"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/label2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="30dp"
+                android:gravity="center_horizontal"
+                android:text="WORD OF GOD"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/label3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label2"
+                android:gravity="center_horizontal"
+                android:text="Creative Word"
+                android:textSize="15sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label3"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="15sp"
+                android:layout_marginTop="34dp"
+                android:gravity="center_horizontal"
+                android:text="10 As the rain and the snow come down from heaven, and do not return to it without watering the earth and making it bud and flourish, so that it yields seed for the sower and bread for the eater, 11 so is my word that goes out from my mouth: It will not return to me empty, but will accomplish what I desire and achieve the purpose for which I sent it. Let us pray. \n Isaiah 55:10-11  "
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label3"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="15sp"
+                android:layout_marginTop="34dp"
+                android:gravity="center_horizontal"
+                android:text="10 As the rain and the snow come down from heaven, and do not return to it without watering the earth and making it bud and flourish, so that it yields seed for the sower and bread for the eater, 11 so is my word that goes out from my mouth: It will not return to me empty, but will accomplish what I desire and achieve the purpose for which I sent it. Let us pray. \n Isaiah 55:10-11  "
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label3"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="15sp"
+                android:layout_marginTop="34dp"
+                android:gravity="center_horizontal"
+                android:text="10 As the rain and the snow come down from heaven, and do not return to it without watering the earth and making it bud and flourish, so that it yields seed for the sower and bread for the eater, 11 so is my word that goes out from my mouth: It will not return to me empty, but will accomplish what I desire and achieve the purpose for which I sent it. Let us pray. \n Isaiah 55:10-11  "
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label3"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="15sp"
+                android:layout_marginTop="34dp"
+                android:gravity="center_horizontal"
+                android:text="10 As the rain and the snow come down from heaven, and do not return to it without watering the earth and making it bud and flourish, so that it yields seed for the sower and bread for the eater, 11 so is my word that goes out from my mouth: It will not return to me empty, but will accomplish what I desire and achieve the purpose for which I sent it. Let us pray. \n Isaiah 55:10-11  "
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label3"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="15sp"
+                android:layout_marginTop="34dp"
+                android:gravity="center_horizontal"
+                android:text="10 As the rain and the snow come down from heaven, and do not return to it without watering the earth and making it bud and flourish, so that it yields seed for the sower and bread for the eater, 11 so is my word that goes out from my mouth: It will not return to me empty, but will accomplish what I desire and achieve the purpose for which I sent it. Let us pray. \n Isaiah 55:10-11  "
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label3"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="15sp"
+                android:layout_marginTop="34dp"
+                android:gravity="center_horizontal"
+                android:text="10 As the rain and the snow come down from heaven, and do not return to it without watering the earth and making it bud and flourish, so that it yields seed for the sower and bread for the eater, 11 so is my word that goes out from my mouth: It will not return to me empty, but will accomplish what I desire and achieve the purpose for which I sent it. Let us pray. \n Isaiah 55:10-11  "
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>

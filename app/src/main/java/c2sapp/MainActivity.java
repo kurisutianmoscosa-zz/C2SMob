@@ -65,26 +65,20 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawer.Fr
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+        switch (item.getItemId()) {
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            Toast.makeText(getApplicationContext(), "Setting action is selected!", Toast.LENGTH_SHORT).show();
-            return true;
+            //noinspection SimplifiableIfStatement
+            case R.id.action_settings:
+                Toast.makeText(getApplicationContext(), "Setting action is selected!", Toast.LENGTH_SHORT).show();
+                return true;
+
+            case R.id.action_search:
+                // Inflate the menu; this adds items to the action bar if it is present.
+                Toast.makeText(getApplicationContext(), "Search action is selected!", Toast.LENGTH_SHORT).show();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
-
-        if (id == R.id.action_search) {
-//TODO: FIX!!
-            // Inflate the menu; this adds items to the action bar if it is present.
-
-            Toast.makeText(getApplicationContext(), "Search action is selected!", Toast.LENGTH_SHORT).show();
-            return true;
-
-//            startActivity(new Intent(this, LessonThree.class));
-
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 
     @Override

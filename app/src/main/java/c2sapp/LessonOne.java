@@ -29,9 +29,6 @@ public class LessonOne extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-//        View rootView = inflater.inflate(R.layout.fragment_lesson_one, container, false);
-//        return rootView;
-
         View mainView = inflater.inflate(R.layout.fragment_web, container, false);
         WebView webView = (WebView) mainView.findViewById(R.id.webview);
         webView.loadUrl("file:///android_asset/www/en-Sensorex_SAM-1_use_en.html");

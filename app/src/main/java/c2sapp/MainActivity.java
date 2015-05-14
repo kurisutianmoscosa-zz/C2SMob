@@ -4,7 +4,6 @@ package c2sapp;
  * Created by ChristianMoscosa on 4/22/2015.
  */
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -55,11 +54,14 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawer.Fr
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
+
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
+//TODO: FIX THIS THING
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
@@ -72,9 +74,14 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawer.Fr
         }
 
         if (id == R.id.action_search) {
-//            Toast.makeText(getApplicationContext(), "Search action is selected!", Toast.LENGTH_SHORT).show();
-//            return true;
-            startActivity(new Intent(this, LessonThree.class));
+//TODO: FIX!!
+            // Inflate the menu; this adds items to the action bar if it is present.
+
+            Toast.makeText(getApplicationContext(), "Search action is selected!", Toast.LENGTH_SHORT).show();
+            return true;
+
+//            startActivity(new Intent(this, LessonThree.class));
+
         }
 
         return super.onOptionsItemSelected(item);

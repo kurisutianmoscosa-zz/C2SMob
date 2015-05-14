@@ -55,7 +55,7 @@
                 android:layout_margin="15sp"
                 android:layout_marginTop="34dp"
                 android:gravity="center_horizontal"
-                android:text="10 As the rain and the snow come down from heaven, and do not return to it without watering the earth and making it bud and flourish, so that it yields seed for the sower and bread for the eater, 11 so is my word that goes out from my mouth: It will not return to me empty, but will accomplish what I desire and achieve the purpose for which I sent it. Let us pray. \n Isaiah 55:10-11  "
+                android:text= "@string/lesson_one"
                 android:textSize="18sp"
                 android:textStyle="italic" />
 
@@ -67,7 +67,7 @@
                 android:layout_margin="15sp"
                 android:layout_marginTop="34dp"
                 android:gravity="center_horizontal"
-                android:text="10 As the rain and the snow come down from heaven, and do not return to it without watering the earth and making it bud and flourish, so that it yields seed for the sower and bread for the eater, 11 so is my word that goes out from my mouth: It will not return to me empty, but will accomplish what I desire and achieve the purpose for which I sent it. Let us pray. \n Isaiah 55:10-11  "
+                android:text= "@string/lesson_one"
                 android:textSize="18sp"
                 android:textStyle="italic" />
 
@@ -79,7 +79,7 @@
                 android:layout_margin="15sp"
                 android:layout_marginTop="34dp"
                 android:gravity="center_horizontal"
-                android:text="10 As the rain and the snow come down from heaven, and do not return to it without watering the earth and making it bud and flourish, so that it yields seed for the sower and bread for the eater, 11 so is my word that goes out from my mouth: It will not return to me empty, but will accomplish what I desire and achieve the purpose for which I sent it. Let us pray. \n Isaiah 55:10-11  "
+                android:text= "@string/lesson_one"
                 android:textSize="18sp"
                 android:textStyle="italic" />
 
@@ -91,7 +91,7 @@
                 android:layout_margin="15sp"
                 android:layout_marginTop="34dp"
                 android:gravity="center_horizontal"
-                android:text="10 As the rain and the snow come down from heaven, and do not return to it without watering the earth and making it bud and flourish, so that it yields seed for the sower and bread for the eater, 11 so is my word that goes out from my mouth: It will not return to me empty, but will accomplish what I desire and achieve the purpose for which I sent it. Let us pray. \n Isaiah 55:10-11  "
+                android:text= "@string/lesson_one"
                 android:textSize="18sp"
                 android:textStyle="italic" />
 
@@ -103,7 +103,7 @@
                 android:layout_margin="15sp"
                 android:layout_marginTop="34dp"
                 android:gravity="center_horizontal"
-                android:text="10 As the rain and the snow come down from heaven, and do not return to it without watering the earth and making it bud and flourish, so that it yields seed for the sower and bread for the eater, 11 so is my word that goes out from my mouth: It will not return to me empty, but will accomplish what I desire and achieve the purpose for which I sent it. Let us pray. \n Isaiah 55:10-11  "
+                android:text= "@string/lesson_one"
                 android:textSize="18sp"
                 android:textStyle="italic" />
 
@@ -115,7 +115,7 @@
                 android:layout_margin="15sp"
                 android:layout_marginTop="34dp"
                 android:gravity="center_horizontal"
-                android:text="10 As the rain and the snow come down from heaven, and do not return to it without watering the earth and making it bud and flourish, so that it yields seed for the sower and bread for the eater, 11 so is my word that goes out from my mouth: It will not return to me empty, but will accomplish what I desire and achieve the purpose for which I sent it. Let us pray. \n Isaiah 55:10-11  "
+                android:text= "@string/lesson_one"
                 android:textSize="18sp"
                 android:textStyle="italic" />
 

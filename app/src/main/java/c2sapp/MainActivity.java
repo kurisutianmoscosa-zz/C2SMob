@@ -63,7 +63,7 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawer.Fr
     private void handleIntent(Intent intent) {
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             String query = intent.getStringExtra(SearchManager.QUERY);
-            //use the query to search your data somehow
+            //TODO : SEARCH CODE HERE
         }
     }
 
@@ -104,8 +104,6 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawer.Fr
                 // Inflate the menu; this adds items to the action bar if it is present.
                 Toast.makeText(getApplicationContext(), "Search action is selected!", Toast.LENGTH_SHORT).show();
                 return true;
-
-
             default:
                 return super.onOptionsItemSelected(item);
         }

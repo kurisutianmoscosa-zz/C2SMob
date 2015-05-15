@@ -1,6 +1,7 @@
 <resources>
     <!-- Application name -->
     <string name="app_name">C2SApp</string>
+    <string name="search_hint">Search key or value</string>
 
     <string name="action_settings">Settings</string>
     <string name="action_search">Search</string>
@@ -55,9 +56,4 @@
     <string name="hello_world">Hello world!</string>
     <string name="sample_key">meow</string>
 
-<!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
-<!-- SCRIPTURES -->
-    <string name="lesson_one">10 As the rain and the snow come down from heaven, and do not return to it without watering the earth and making it bud and flourish, so that it yields seed for the sower and bread for the eater, 11 so is my word that goes out from my mouth: It will not return to me empty, but will accomplish what I desire and achieve the purpose for which I sent it. Let us pray. \n Isaiah 55:10-11</string>
 </resources>

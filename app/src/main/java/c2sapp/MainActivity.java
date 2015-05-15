@@ -4,14 +4,21 @@ package c2sapp;
  * Created by ChristianMoscosa on 4/22/2015.
  */
 
+import android.annotation.SuppressLint;
+import android.app.SearchManager;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
@@ -23,20 +30,18 @@ import adapter.FragmentDrawer;
 public class MainActivity extends ActionBarActivity implements FragmentDrawer.FragmentDrawerListener {
 
     private static String TAG = MainActivity.class.getSimpleName();
-
+    Menu mMenu;
     private Toolbar mToolbar;
     private FragmentDrawer drawerFragment;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_toolbar);
-
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
-
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+        handleIntent(getIntent());
 
         drawerFragment = (FragmentDrawer)
                 getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer);
@@ -47,14 +52,37 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawer.Fr
         if (savedInstanceState == null) {
             displayView(0);
         }
+    }
 
+    //TODO : SEARCH
+    @Override
+    protected void onNewIntent(Intent intent) {
+        handleIntent(intent);
+    }
+
+    private void handleIntent(Intent intent) {
+        if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
+            String query = intent.getStringExtra(SearchManager.QUERY);
+            //use the query to search your data somehow
+        }
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        mMenu = menu;
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
 
+        // Associate searchable configuration with the SearchView
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
+            SearchManager searchManager =
+                    (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+            SearchView searchView =
+                    (SearchView) menu.findItem(R.id.action_search).getActionView();
+            searchView.setSearchableInfo(
+                    searchManager.getSearchableInfo(getComponentName()));
+        }
         return true;
     }
 
@@ -76,9 +104,27 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawer.Fr
                 // Inflate the menu; this adds items to the action bar if it is present.
                 Toast.makeText(getApplicationContext(), "Search action is selected!", Toast.LENGTH_SHORT).show();
                 return true;
+
+
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    @SuppressLint("NewApi")
+    @Override
+    public boolean onSearchRequested() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
+            MenuItem mi = mMenu.findItem(R.id.action_search);
+            if (mi.isActionViewExpanded()) {
+                mi.collapseActionView();
+            } else {
+                mi.expandActionView();
+            }
+        } else {
+            //onOptionsItemSelected(mMenu.findItem(R.id.search));
+        }
+        return super.onSearchRequested();
     }
 
     @Override

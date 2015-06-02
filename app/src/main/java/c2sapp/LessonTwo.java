@@ -9,6 +9,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
+
 import com.wizardsgroup.christianmoscosa.c2sapp.R;
 
 
@@ -27,11 +29,10 @@ public class LessonTwo extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_lesson_two, container, false);
-
-
-        // Inflate the layout for this fragment
-        return rootView;
+        View mainView = inflater.inflate(R.layout.fragment_web, container, false);
+        WebView webView = (WebView) mainView.findViewById(R.id.webview);
+        webView.loadUrl("file:///android_asset/www/sample.html");
+        return mainView;
     }
 
     @Override

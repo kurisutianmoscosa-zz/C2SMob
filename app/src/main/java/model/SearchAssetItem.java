@@ -1,11 +1,8 @@
-package c2sapp;
+package model;
 
-/**
- * Created by ChristianMoscosa on 5/7/2015.
- */
 import android.app.Activity;
+import android.app.Fragment;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,10 +10,11 @@ import android.webkit.WebView;
 
 import com.wizardsgroup.christianmoscosa.c2sapp.R;
 
-
-public class LessonThree extends Fragment {
-
-    public LessonThree() {
+/**
+ * Created by shuri_000 on 5/19/2015.
+ */
+public class SearchAssetItem extends Fragment{
+    public SearchAssetItem() {
         // Required empty public constructor
     }
 
@@ -31,10 +29,14 @@ public class LessonThree extends Fragment {
                              Bundle savedInstanceState) {
         View mainView = inflater.inflate(R.layout.fragment_web, container, false);
         WebView webView = (WebView) mainView.findViewById(R.id.webview);
-        webView.loadUrl("file:///android_asset/www/sample2.html");
+        webView.loadUrl("file:///android_asset/www/c2ssample.html");
         return mainView;
+
     }
 
+    public void AssetManager(){
+
+    }
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
@@ -45,3 +47,4 @@ public class LessonThree extends Fragment {
         super.onDetach();
     }
 }
+

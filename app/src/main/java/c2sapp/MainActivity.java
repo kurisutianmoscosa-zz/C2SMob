@@ -21,6 +21,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Toast;
 
 import com.wizardsgroup.christianmoscosa.c2sapp.R;
@@ -33,11 +34,15 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawer.Fr
     Menu mMenu;
     private Toolbar mToolbar;
     private FragmentDrawer drawerFragment;
+    WebView wv;
+    public String ExtraMessage = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_toolbar);
+        wv = (WebView) findViewById(R.id.webview);
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -54,17 +59,50 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawer.Fr
         }
     }
 
-    //TODO : SEARCH
     @Override
     protected void onNewIntent(Intent intent) {
         handleIntent(intent);
     }
 
-    private void handleIntent(Intent intent) {
+    public void handleIntent(Intent intent) {
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             String query = intent.getStringExtra(SearchManager.QUERY);
-            //TODO : SEARCH CODE HERE
+            doSearch(query);
+            //Toast.makeText(getApplicationContext(), query, Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private void doSearch(String query) {
+        //TODO: send query to SearchAssetItem
+
+        //View mainView = inflater.inflate(R.layout.fragment_web, container, false);
+        //WebView webView = (WebView) mainView.findViewById(R.id.webview);
+
+//        wv.loadUrl("file://android_asset/www/sample.html");
+//        wv.findAllAsync(query);
+        //wv.loadUrl("http://devemat-androidprogramming.blogspot.com/");
+        //wv.findAllAsync(query.toString());
+
+//        Intent intent = new Intent(this, ListOfSearchResult.class);
+//        String keyIdentifer  = "strqry";
+//        intent.putExtra(keyIdentifer, query );
+//        ExtraMessage = query;
+//
+//        startActivity(intent);
+
+        Bundle bundle = new Bundle();
+        bundle.putString("query", query);
+
+
+        ListOfSearchResult fragment = new ListOfSearchResult();
+        fragment.setArguments(bundle);
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.addToBackStack("main");
+        fragmentTransaction.add(R.id.container_body, fragment);
+        getSupportFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+        fragmentTransaction.commit();
     }
 
     @Override
@@ -174,6 +212,15 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawer.Fr
 
             // set the toolbar title
             getSupportActionBar().setTitle(title);
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
+            getSupportFragmentManager().popBackStack();
+        } else {
+            super.onBackPressed();
         }
     }
 }

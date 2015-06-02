@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 
-import com.wizardsgroup.christianmoscosa.c2sapp.R;
+import helper.SetWebViewClient;
 
 
 public class LessonOne extends Fragment {
@@ -23,15 +23,15 @@ public class LessonOne extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View mainView = inflater.inflate(R.layout.fragment_web, container, false);
-        WebView webView = (WebView) mainView.findViewById(R.id.webview);
-        webView.loadUrl("file:///android_asset/www/en-Sensorex_SAM-1_use_en.html");
+        SetWebViewClient setWebViewClient = new SetWebViewClient(inflater, container).invoke();
+        WebView webView = setWebViewClient.getWebView();
+        View mainView = setWebViewClient.getMainView();
+        webView.loadUrl("file:///android_asset/www/c2ssample.html");
         return mainView;
     }
 
@@ -46,3 +46,4 @@ public class LessonOne extends Fragment {
         super.onDetach();
     }
 }
+

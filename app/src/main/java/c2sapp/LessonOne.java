@@ -35,7 +35,6 @@ public class LessonOne extends Fragment {
         return mainView;
     }
 
-
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);

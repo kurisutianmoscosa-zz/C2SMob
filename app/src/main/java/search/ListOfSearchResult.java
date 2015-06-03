@@ -1,4 +1,4 @@
-package c2sapp;
+package search;
 
 
 import android.support.v4.app.Fragment;
@@ -8,18 +8,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.wizardsgroup.christianmoscosa.c2sapp.R;
+import com.cogdasma.c2smob.R;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class ListOfSearchResult extends Fragment {
-
 
     public ListOfSearchResult() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

@@ -5,7 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 
-import com.wizardsgroup.christianmoscosa.c2sapp.R;
+import com.cogdasma.c2smob.R;
 
 /**
  * Created by shuri_000 on 5/19/2015.

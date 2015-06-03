@@ -7,9 +7,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.cogdasma.c2smob.R;
+
 import java.util.Collections;
 import java.util.List;
-import com.wizardsgroup.christianmoscosa.c2sapp.R;
 
 import model.NavDrawerItem;
 

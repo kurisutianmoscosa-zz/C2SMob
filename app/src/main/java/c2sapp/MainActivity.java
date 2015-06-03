@@ -24,9 +24,10 @@ import android.view.View;
 import android.webkit.WebView;
 import android.widget.Toast;
 
-import com.wizardsgroup.christianmoscosa.c2sapp.R;
+import com.cogdasma.c2smob.R;
 
 import adapter.FragmentDrawer;
+import search.ListOfSearchResult;
 
 public class MainActivity extends ActionBarActivity implements FragmentDrawer.FragmentDrawerListener {
 
@@ -68,31 +69,13 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawer.Fr
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             String query = intent.getStringExtra(SearchManager.QUERY);
             doSearch(query);
-            //Toast.makeText(getApplicationContext(), query, Toast.LENGTH_SHORT).show();
         }
     }
 
     private void doSearch(String query) {
-        //TODO: send query to SearchAssetItem
-
-        //View mainView = inflater.inflate(R.layout.fragment_web, container, false);
-        //WebView webView = (WebView) mainView.findViewById(R.id.webview);
-
-//        wv.loadUrl("file://android_asset/www/sample.html");
-//        wv.findAllAsync(query);
-        //wv.loadUrl("http://devemat-androidprogramming.blogspot.com/");
-        //wv.findAllAsync(query.toString());
-
-//        Intent intent = new Intent(this, ListOfSearchResult.class);
-//        String keyIdentifer  = "strqry";
-//        intent.putExtra(keyIdentifer, query );
-//        ExtraMessage = query;
-//
-//        startActivity(intent);
 
         Bundle bundle = new Bundle();
         bundle.putString("query", query);
-
 
         ListOfSearchResult fragment = new ListOfSearchResult();
         fragment.setArguments(bundle);
@@ -126,8 +109,6 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawer.Fr
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
-//TODO: FIX THIS THING
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
